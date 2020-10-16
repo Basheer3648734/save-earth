@@ -1,0 +1,112 @@
+@import "../../variables.scss";
+.oath {
+  color: $foreground;
+  width: 80%;
+  margin: auto;
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  visibility: hidden;
+  height: 100vh;
+  overflow: hidden;
+}
+nav {
+  overflow: hidden;
+  h3 {
+    font-size: 1.3rem;
+  }
+}
+.oath__content {
+  display: flex;
+  justify-content: center;
+  margin-top: 0vh;
+  width: 100%;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  //   background-color: red;
+  height: 100%;
+  .oath__line {
+    width: 100%;
+    text-align: center;
+    font-size: clamp(1rem, 10vw, 2rem);
+    input {
+      background: inherit;
+      color: inherit;
+      font-size: inherit;
+      border: none;
+      margin: 0px;
+      padding: 0px;
+      outline: none;
+      text-align: center;
+      border-bottom: 3px solid $foreground;
+      font-weight: 700;
+    }
+  }
+  button {
+    background-color: yellowgreen;
+    padding: 10px 15px;
+    font-weight: 800;
+    color: $foreground;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 10vh;
+    font-size: clamp(1rem, 10vh, 1.2rem);
+  }
+  .oath__error {
+    margin-top: 3vh;
+    // display: none;
+    color: red;
+    font-size: clamp(1.2rem, 10vw, 1rem);
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .oath {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .oath {
+    width: 95%;
+    // background-color: green;
+    margin: auto;
+  }
+  .oath__content {
+    margin: auto;
+    margin-top: 0vh;
+    width: 90%;
+    button {
+      margin-top: 5vh;
+    }
+  }
+}
+//oath takers info
+.oath__takersInfo {
+  margin-top: 5vh;
+  h4 {
+    font-weight: 400;
+    font-size: clamp(1.2rem, 20vw, 1rem);
+  }
+}
+//success message
+.oath__success {
+  height: 100%;
+  display: none;
+  place-content: center;
+  //   font-size: 2rem;
+  font-size: clamp(1.5rem, 10vw, 2rem);
+  .back__home {
+    color: white;
+    // background-color: greenyellow;
+    padding: 5px 15px;
+    width: fit-content;
+    font-size: clamp(1rem, 10vw, 1.2rem);
+    margin: auto;
+    text-align: center;
+    margin-top: 5vh;
+  }
+}
